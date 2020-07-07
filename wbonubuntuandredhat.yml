@@ -2,7 +2,7 @@
   - hosts: webservers
     become: yes
     tasks: 
-    - name: i want to install webserver on ubuntu
+    - name: i want to install webserveronubuntu
       apt:
         name: "{{webserveronubuntu}}"
         state: present
