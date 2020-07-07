@@ -1,0 +1,14 @@
+---
+- hosts: [webservers]
+  become: yes
+  tasks:
+  - name: i want to install webserver on ubuntu
+    apt:
+     name: "{{ubuntuserver}}"
+     state: present
+    when: ansible_os_family =="Debian"
+  - name: i want to install webserver on RedHat
+    yum:
+     name: "{{redhatserver}}"
+     state: present
+    when: ansible_os_family =="RedHat"
