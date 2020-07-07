@@ -2,12 +2,12 @@
  - hosts: [wbservers]
    become: yes
    tasks:
-    - name: installing webserviceon ubuntu node
+    - name: installing wbserver on ubuntu
       apt:
        name: "{{linuxserver}}"
        state: present
       when:   ansible_os_family =="Debian"
-    - name: installing webserveron redhat node
+    - name: installing wbserver on redhat
       yum:
         name: "{{redhatsrever}}"
         state: present
