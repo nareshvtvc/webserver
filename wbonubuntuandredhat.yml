@@ -2,25 +2,25 @@
   - hosts: webservers
     become: yes
     tasks: 
-    - name: i want to install webserver on ubuntu
+    - name: i want to install webserveronubuntu
       apt:
         name: "{{webserveronubuntu}}"
         state: present
       when: ansible_os_family=="Debian"
 
-    - name: start webserver on ubuntu
+    - name: start webserveronubuntu
       service: 
         name: "{{webserveronubuntu}}" 
         state: started
       when: ansible_os_family=="Debian"
 
-    - name: i want to install webserver on Redhat
+    - name: i want to install webserveronRedhat
       yum:
         name: "{{webserveronredhat}}"
         state: present
       when: ansible_os_family=="RedHat"
 
-    - name: start webserver on Redhat
+    - name: start webserveronRedhat
       service:
         name: "{{webserveronredhat}}"
         state: started
