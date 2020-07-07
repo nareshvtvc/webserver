@@ -1,6 +1,5 @@
 ---
-key: value
+ key: value
 
-
-ubuntuserver: apache2
-redhatserver: httpd
+ linuxserver: apache2
+ redhatsrever: httpd
